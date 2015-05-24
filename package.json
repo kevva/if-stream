@@ -1,0 +1,37 @@
+{
+  "name": "if-stream",
+  "version": "1.0.0",
+  "description": "Conditionally return a stream",
+  "license": "MIT",
+  "repository": "kevva/if-stream",
+  "author": {
+    "name": "Kevin Martensson",
+    "email": "kevinmartensson@gmail.com",
+    "url": "github.com/kevva"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "node test.js"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "conditional",
+    "match",
+    "if",
+    "stream"
+  ],
+  "dependencies": {
+    "is-stream": "^1.0.1",
+    "match-condition": "^1.0.0",
+    "peek-stream": "^1.1.1",
+    "through2": "^0.6.5"
+  },
+  "devDependencies": {
+    "ava": "^0.0.4",
+    "csv-parser": "^1.6.0"
+  }
+}
