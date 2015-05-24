@@ -7,7 +7,7 @@ var through = require('through2');
 module.exports = function (condition, stream, fn, opts) {
 	opts = opts || {};
 
-	if (fn && !isStream(fn)) {
+	if (fn && !isStream(fn) && typeof fn !== 'function') {
 		opts = fn;
 	}
 
@@ -18,7 +18,7 @@ module.exports = function (condition, stream, fn, opts) {
 		}
 
 		if (!matchCondition(data, condition)) {
-			swap(null, fn);
+			swap(null, typeof fn === 'function' ? fn() : fn);
 			return;
 		}
 

@@ -11,7 +11,7 @@ function isCsv(data) {
 test('meet condition', function (t) {
 	t.plan(2);
 
-	var stream = ifStream(isCsv, csvParser);
+	var stream = ifStream(isCsv, csvParser, {maxBuffer: 10000});
 
 	stream.on('data', function (data) {
 		t.assert(data.foo === 'bar');
