@@ -12,7 +12,7 @@ module.exports = function (condition, stream, fn, opts) {
 	}
 
 	var peek = peekStream(opts, function (data, swap) {
-		if (!matchCondition(data, condition) && !isStream(fn)) {
+		if (!matchCondition(data, condition) && !isStream(fn) && typeof fn !== 'function') {
 			swap(null, through());
 			return;
 		}
