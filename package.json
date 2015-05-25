@@ -1,6 +1,6 @@
 {
   "name": "if-stream",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Conditionally return a stream",
   "license": "MIT",
   "repository": "kevva/if-stream",
