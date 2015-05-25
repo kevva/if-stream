@@ -22,7 +22,7 @@ module.exports = function (condition, stream, fn, opts) {
 			return;
 		}
 
-		swap(null, stream());
+		swap(null, typeof stream === 'function' ? stream() : stream);
 	});
 
 	return peek;
