@@ -13,7 +13,7 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "xo && node test.js"
+    "test": "xo && ava"
   },
   "files": [
     "index.js"
@@ -31,8 +31,9 @@
     "through2": "^0.6.5"
   },
   "devDependencies": {
-    "ava": "^0.0.4",
+    "ava": "*",
     "csv-parser": "^1.6.0",
+    "rfpify": "^1.0.0",
     "xo": "*"
   }
 }
