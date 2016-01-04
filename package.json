@@ -28,7 +28,7 @@
     "is-stream": "^1.0.1",
     "match-condition": "^1.0.0",
     "peek-stream": "^1.1.1",
-    "through2": "^0.6.5"
+    "through2": "^2.0.0"
   },
   "devDependencies": {
     "ava": "*",
