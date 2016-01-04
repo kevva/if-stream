@@ -13,16 +13,16 @@ $ npm install --save if-stream
 ## Usage
 
 ```js
-var csvParser = require('csv-parser');
-var ifStream = require('if-stream');
+const csvParser = require('csv-parser');
+const ifStream = require('if-stream');
 
 function isCsv(data) {
 	return data.toString().indexOf(',') !== -1;
 }
 
-var stream = ifStream(isCsv, csvParser);
+const stream = ifStream(isCsv, csvParser);
 
-stream.on('data', function (data) {
+stream.on('data', data => {
 	console.log(data);
 	//=> {foo: 'bar', unicorn: 'cat'}
 });
