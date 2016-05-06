@@ -10,7 +10,7 @@
     "url": "github.com/kevva"
   },
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=4"
   },
   "scripts": {
     "test": "xo && ava"
@@ -35,5 +35,8 @@
     "csv-parser": "^1.6.0",
     "get-stream": "^2.2.0",
     "xo": "*"
+  },
+  "xo": {
+    "esnext": true
   }
 }

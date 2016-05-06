@@ -1,17 +1,17 @@
 'use strict';
-var isStream = require('is-stream');
-var matchCondition = require('match-condition');
-var peekStream = require('peek-stream');
-var through = require('through2');
+const isStream = require('is-stream');
+const matchCondition = require('match-condition');
+const peekStream = require('peek-stream');
+const through = require('through2');
 
-module.exports = function (condition, stream, fn, opts) {
-	opts = opts || {};
-
+module.exports = (condition, stream, fn, opts) => {
 	if (fn && !isStream(fn) && typeof fn !== 'function') {
 		opts = fn;
 	}
 
-	var peek = peekStream(opts, function (data, swap) {
+	opts = opts || {};
+
+	return peekStream(opts, (data, swap) => {
 		if (!matchCondition(data, condition) && !isStream(fn) && typeof fn !== 'function') {
 			swap(null, through());
 			return;
@@ -24,6 +24,4 @@ module.exports = function (condition, stream, fn, opts) {
 
 		swap(null, typeof stream === 'function' ? stream() : stream);
 	});
-
-	return peek;
 };

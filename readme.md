@@ -16,10 +16,7 @@ $ npm install --save if-stream
 const csvParser = require('csv-parser');
 const ifStream = require('if-stream');
 
-function isCsv(data) {
-	return data.toString().indexOf(',') !== -1;
-}
-
+const isCsv = data => data.toString().indexOf(',') !== -1;
 const stream = ifStream(isCsv, csvParser);
 
 stream.on('data', data => {
@@ -33,18 +30,16 @@ stream.end('foo,unicorn\nbar,cat\n');
 
 ## API
 
-### ifStream(condition, stream, [optionalStream], options)
+### ifStream(condition, stream, [optionalStream], [options])
 
 #### condition
 
-*Required*  
-Type: `function`, `string`, `boolean` or `regex`
+Type: `function`, `string`, `boolean`, `regex`
 
 Condition to match the stream buffer against.
 
 #### stream
 
-*Required*  
 Type: `stream`
 
 The stream to be returned if the condition is met.
