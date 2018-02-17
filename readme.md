@@ -6,7 +6,7 @@
 ## Install
 
 ```
-$ npm install --save if-stream
+$ npm install if-stream
 ```
 
 
@@ -34,26 +34,27 @@ stream.end('foo,unicorn\nbar,cat\n');
 
 #### condition
 
-Type: `function`, `string`, `boolean`, `regex`
+Type: `Function` `string` `boolean` `RegExp`
 
 Condition to match the stream buffer against.
 
 #### stream
 
-Type: `stream`
+Type: `Stream`
 
 The stream to be returned if the condition is met.
 
 #### optionalStream
 
-Type: `stream`
+Type: `Stream`<br>
+Default: `stream.Transform`
 
-An optional stream to be returned if the condition isn't met. By default a 
-transform stream is returned.
+An optional stream to be returned if the condition isn't met. By default a
+`stream.Transform` is returned.
 
 #### options
 
-Type: `object`
+Type: `Object`
 
 Options to pass to [peek-stream](https://github.com/mafintosh/peek-stream).
 

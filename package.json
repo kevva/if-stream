@@ -1,42 +1,38 @@
 {
-  "name": "if-stream",
-  "version": "2.0.0",
-  "description": "Conditionally return a stream",
-  "license": "MIT",
-  "repository": "kevva/if-stream",
-  "author": {
-    "name": "Kevin Martensson",
-    "email": "kevinmartensson@gmail.com",
-    "url": "github.com/kevva"
-  },
-  "engines": {
-    "node": ">=4"
-  },
-  "scripts": {
-    "test": "xo && ava"
-  },
-  "files": [
-    "index.js"
-  ],
-  "keywords": [
-    "conditional",
-    "match",
-    "if",
-    "stream"
-  ],
-  "dependencies": {
-    "is-stream": "^1.0.1",
-    "match-condition": "^1.0.0",
-    "peek-stream": "^1.1.1",
-    "through2": "^2.0.0"
-  },
-  "devDependencies": {
-    "ava": "*",
-    "csv-parser": "^1.6.0",
-    "get-stream": "^2.2.0",
-    "xo": "*"
-  },
-  "xo": {
-    "esnext": true
-  }
+	"name": "if-stream",
+	"version": "2.0.0",
+	"description": "Conditionally return a stream",
+	"license": "MIT",
+	"repository": "kevva/if-stream",
+	"author": {
+		"name": "Kevin Martensson",
+		"email": "kevinmartensson@gmail.com",
+		"url": "github.com/kevva"
+	},
+	"engines": {
+		"node": ">=4"
+	},
+	"scripts": {
+		"test": "xo && ava"
+	},
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"conditional",
+		"match",
+		"if",
+		"stream"
+	],
+	"dependencies": {
+		"is-stream": "^1.0.1",
+		"match-condition": "^1.0.0",
+		"peek-stream": "^1.1.2"
+	},
+	"devDependencies": {
+		"ava": "*",
+		"csv-parser": "^1.6.0",
+		"get-stream": "^3.0.0",
+		"xo": "*"
+	}
 }
