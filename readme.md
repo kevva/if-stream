@@ -47,10 +47,10 @@ The stream to be returned if the condition is met.
 #### optionalStream
 
 Type: `Stream`<br>
-Default: `stream.Transform`
+Default: `stream.PassThrough`
 
 An optional stream to be returned if the condition isn't met. By default a
-`stream.Transform` is returned.
+`stream.PassThrough` is returned.
 
 #### options
 

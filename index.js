@@ -7,14 +7,14 @@ const peekStream = require('peek-stream');
 module.exports = (condition, stream, fn, opts) => {
 	opts = Object.assign({}, opts);
 
-	const haveFn = isStream(fn) || typeof fn === 'function';
+	const isStreamFn = isStream(fn) || typeof fn === 'function';
 
-	if (fn && !haveFn) {
+	if (fn && !isStreamFn) {
 		opts = fn;
 	}
 
 	return peekStream(opts, (data, swap) => {
-		if (!matchCondition(data, condition) && !haveFn) {
+		if (!matchCondition(data, condition) && !isStreamFn) {
 			swap(null, new streamLib.PassThrough());
 			return;
 		}

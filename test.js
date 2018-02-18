@@ -5,6 +5,7 @@ import test from 'ava';
 import m from '.';
 
 const isCsv = data => data.toString().indexOf(',') !== -1;
+
 const throughStream = fn => new Transform({
 	transform(data, enc, cb) {
 		fn(data, enc, cb);
